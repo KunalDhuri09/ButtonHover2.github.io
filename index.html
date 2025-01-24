@@ -1,0 +1,85 @@
+<Doctype html>
+<html>
+    <head>
+        <title>Animated css Buttons</title>
+    </head>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+            background: #333;
+        }
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%,-50%);
+        }
+        .btn{
+            position: relative;
+            display: block;
+            color: white;
+            font-size: 1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 30px 20px;
+            border: 2px solid rgb(192, 49 , 80);
+            border-radius: 2px;
+            padding: 14px 60px;
+            overflow: hidden;
+            transition: all is ease;
+
+        }
+        .btn::before{
+            background:  rgb(192, 49 , 80);
+            content: "";
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            transition: all 0.6s ease;
+            position: absolute;
+        }
+        .btn1::before{
+            width: 0;
+            height: 100%;
+        }
+        .btn1:hover::before{
+            width:100%;
+        }
+        .btn2::before{
+            width: 100%;
+            height: 0;
+        }
+        .btn2:hover::before{
+            height:100%;
+        }
+        .btn3::before{
+            width: 100%;
+            height: 0;
+            transform: translate(-50%, -50%) rotate(45deg); 
+        }
+        .btn3:hover::before{
+            height:380%;
+        }
+        .btn4::before{
+            width: 100%;
+            height: 0;
+            transform: translate(-50%, -50%) rotate(-45deg); 
+        }
+        .btn4:hover::before{
+            height:380%;
+        }
+
+    </style>
+    <body>
+        <div class="container">
+            <a href=" " class="btn btn1">Hover Me</a>
+            <a href=" " class="btn btn2">Hover Me</a>
+            <a href=" " class="btn btn3">Hover Me</a>
+            <a href=" " class="btn btn4">Hover Me</a>
+        </div>
+    </body>
+</html>
